@@ -1,0 +1,26 @@
+{
+  "name": "SharePoint Document Agent",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+  "postCreateCommand": "pip install -r requirements.txt && [ -f .env ] || cp .env.example .env",
+  "postStartCommand": "echo '✅ Dependencies ready. Run: make run  (or: uvicorn app.main:app --reload)'",
+  "forwardPorts": [8000],
+  "portsAttributes": {
+    "8000": {
+      "label": "FastAPI server",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "rangav.vscode-thunder-client"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python",
+        "editor.formatOnSave": true
+      }
+    }
+  }
+}

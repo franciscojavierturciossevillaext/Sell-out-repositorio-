@@ -1,6 +1,41 @@
 # SharePoint Document Agent – MVP
 
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/franciscojavierturciossevillaext/Sell-out-repositorio-)
+
 Backend FastAPI service that connects to **Microsoft SharePoint** via the **Microsoft Graph API**, ingests documents, and exposes endpoints for basic document analysis and Q&A.
+
+---
+
+## ⚡ Quickstart (3 ways)
+
+### Option A – GitHub Codespaces (recommended, zero local setup)
+
+1. Click **"Open in GitHub Codespaces"** badge above (or go to the repo → green **Code** button → **Codespaces** tab → **Create codespace on main**).
+2. Wait ~60 s for the container to build – dependencies install automatically.
+3. In the terminal that opens, run:
+   ```bash
+   bash start.sh
+   ```
+4. Codespaces will show a popup **"Open in browser"** – click it, or navigate to the forwarded port 8000.
+5. Go to the **`/docs`** path for the interactive Swagger UI.
+
+### Option B – One-command local start
+
+```bash
+bash start.sh
+```
+Then open **http://localhost:8000/docs**
+
+### Option C – Manual steps
+
+```bash
+pip install -r requirements.txt
+cp .env.example .env   # edit .env if you have Azure credentials
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+```
+
+> **No Azure credentials?**  
+> The app starts in **stub mode** automatically – you can test every endpoint with synthetic data, no SharePoint connection needed.
 
 ---
 
@@ -141,6 +176,13 @@ GET https://graph.microsoft.com/v1.0/sites/bayergroup.sharepoint.com:/sites/Estr
 ## Running locally
 
 ```bash
+# Easiest – one script does everything:
+bash start.sh
+
+# Or with make:
+make run
+
+# Or manually:
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
 ```
 
