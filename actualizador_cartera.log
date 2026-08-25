@@ -1,0 +1,37 @@
+2026-08-25 17:30:10,234  INFO      Inicio | modo=DEMO | excel=/tmp/Reporte_Prueba.xlsx | csv=/tmp/DATA2026_prueba.csv | tabla=DATA
+2026-08-25 17:30:10,234  INFO      ============================================================
+2026-08-25 17:30:10,234  INFO      MODO DEMO / PRUEBA  –  ningún archivo será modificado
+2026-08-25 17:30:10,234  INFO      ============================================================
+2026-08-25 17:30:10,234  INFO      Abriendo: /tmp/Reporte_Prueba.xlsx
+2026-08-25 17:30:10,239  ERROR     Error inesperado: 'str' object has no attribute 'ref'
+Traceback (most recent call last):
+  File "/home/runner/work/Sell-out-repositorio-/Sell-out-repositorio-/actualizador_cartera.py", line 325, in main
+    modo_demo(args.excel, args.csv, args.tabla)
+  File "/home/runner/work/Sell-out-repositorio-/Sell-out-repositorio-/actualizador_cartera.py", line 192, in modo_demo
+    df_nuevo = leer_tabla_excel(excel, nombre_tabla)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/Sell-out-repositorio-/Sell-out-repositorio-/actualizador_cartera.py", line 151, in leer_tabla_excel
+    filas = list(hoja_tabla[tabla_ref.ref])
+                            ^^^^^^^^^^^^^
+AttributeError: 'str' object has no attribute 'ref'
+2026-08-25 17:30:35,504  INFO      Inicio | modo=DEMO | excel=/tmp/Reporte_Prueba.xlsx | csv=/tmp/DATA2026_prueba.csv | tabla=DATA
+2026-08-25 17:30:35,504  INFO      ============================================================
+2026-08-25 17:30:35,504  INFO      MODO DEMO / PRUEBA  –  ningún archivo será modificado
+2026-08-25 17:30:35,504  INFO      ============================================================
+2026-08-25 17:30:35,504  INFO      Abriendo: /tmp/Reporte_Prueba.xlsx
+2026-08-25 17:30:35,508  INFO      Tabla 'DATA' encontrada en hoja 'Cartera' | rango: A1:F4 | 3 filas x 6 columnas
+2026-08-25 17:30:35,511  INFO      DEMO finalizada sin cambios.
+2026-08-25 17:30:40,083  INFO      Inicio | modo=REAL | excel=/tmp/Reporte_Prueba.xlsx | csv=/tmp/DATA2026_prueba.csv | tabla=DATA
+2026-08-25 17:30:40,084  INFO      ============================================================
+2026-08-25 17:30:40,084  INFO      MODO REAL  –  el CSV será reemplazado
+2026-08-25 17:30:40,084  INFO      ============================================================
+2026-08-25 17:30:40,084  INFO      Abriendo: /tmp/Reporte_Prueba.xlsx
+2026-08-25 17:30:40,088  INFO      Tabla 'DATA' encontrada en hoja 'Cartera' | rango: A1:F4 | 3 filas x 6 columnas
+2026-08-25 17:30:40,091  INFO      CSV actualizado: /tmp/DATA2026_prueba.csv  |  3 filas escritas  |  encoding=utf-8  |  sep=','
+2026-08-25 17:30:43,668  INFO      Inicio | modo=DEMO | excel=/tmp/Reporte_Prueba.xlsx | csv=/tmp/DATA2026_prueba.csv | tabla=TABLA_QUE_NO_EXISTE
+2026-08-25 17:30:43,668  INFO      ============================================================
+2026-08-25 17:30:43,668  INFO      MODO DEMO / PRUEBA  –  ningún archivo será modificado
+2026-08-25 17:30:43,668  INFO      ============================================================
+2026-08-25 17:30:43,669  INFO      Abriendo: /tmp/Reporte_Prueba.xlsx
+2026-08-25 17:30:43,673  ERROR     ERROR: No se encontró una tabla llamada 'TABLA_QUE_NO_EXISTE' en el Excel.
+Tablas encontradas: ['DATA']
