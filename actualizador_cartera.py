@@ -293,13 +293,13 @@ def main() -> None:
         "--excel",
         type=Path,
         default=EXCEL_ORIGEN,
-        help="Ruta al Excel de origen (sobreescribe la ruta por defecto).",
+        help="Ruta al Excel de origen (sobrescribe la ruta por defecto).",
     )
     parser.add_argument(
         "--csv",
         type=Path,
         default=CSV_DESTINO,
-        help="Ruta al CSV de destino (sobreescribe la ruta por defecto).",
+        help="Ruta al CSV de destino (sobrescribe la ruta por defecto).",
     )
     parser.add_argument(
         "--tabla",
